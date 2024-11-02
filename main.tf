@@ -15,7 +15,7 @@ provider "aws" {
 
 resource "null_resource" "run_fibonacci" {
   provisioner "local-exec" {
-    command = "python3 fibo.py"
+    command = "python3 fibo.py > fibonacci_output.txt"
   }
 }
 output "fibonacci_output" {
