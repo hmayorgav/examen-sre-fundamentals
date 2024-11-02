@@ -18,3 +18,6 @@ resource "null_resource" "run_fibonacci" {
     command = "python3 fibo.py"
   }
 }
+output "fibonacci_output" {
+  value = file("fibonacci_output.txt")
+}
