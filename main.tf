@@ -10,11 +10,10 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"  # Change to your desired AWS region
+  region = "us-east-1" 
 }
-
 resource "null_resource" "run_fibonacci" {
   provisioner "local-exec" {
-    command = "python3 fibonacci.py"
+    command = "fibo.py"
   }
 }
